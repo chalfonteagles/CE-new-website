@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Chalfont Eagles Badminton Club</title>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+</head>
+
+<body onload="checkDark()">
+
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Chalfont Eagles</h3>
+            </div>
+            <div style="padding: 10px">
+              <h6>Dark Mode</h6>
+              <label class="switch">
+                <input id="dmswitch" onclick="myFunction()" type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </div>
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>      
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Gallery</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="group1.html">Group 1</a>
+                        </li>
+                        <li>
+                            <a href="group2.html">Group 2</a>
+                        </li>
+                        <li>
+                            <a href="group3.html">Group 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="calendar.html">Calendar</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+                <li>
+                    <a href="news.html">News</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content Holder -->
+        <div id="content">
+             <img src="images/Eagles.jpg" style="width:10%">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="navbar-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>  
+                </div>
+            </nav>
+            
+
+            
+			<h1 style="text-align: center;"> Location</h1>
+			<p style="text-align: center;"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13997.71552174761!2d-0.6005470397703562!3d51.66954147772482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876679319f18f5f%3A0x857a91708a288d60!2sAmersham%20School!5e0!3m2!1sen!2suk!4v1591362632634!5m2!1sen!2suk" width="600" height="450" frameborder="0" style="border:0; text-align: center;" allowfullscreen="" aria-hidden="false" tabindex="0" ></iframe></p>
+
+			<!-- Contact Section -->
+			<div class="w3-padding-64 w3-center w3-content w3-text-black" id="contact">
+				<h2>Contact Me</h2>
+				<hr style="width:200px" class="w3-opacity">
+
+				<div class="w3-section">
+				<p><i class="fa fa-map-marker fa-fw w3-text-red w3-xxlarge w3-margin-right"></i> Amersham, Buckinghamshire</p>
+				<p><i class="fa fa-envelope fa-fw w3-text-red w3-xxlarge w3-margin-right"> </i> Email: simon.broadgates@btinternet.com</p>
+				<p><i class="w3-margin-right"> </i> Let's get in touch. Send me a message:</p>
+				</div>
+				<br>
+
+				<form action="mailto:chalfonteagles@gmail.com" target="get" enctype="text/plain">
+				<p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
+				<p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
+				<p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
+				<p>
+					<button class="w3-button w3-light-grey w3-padding-large" type="submit">
+					<i class="fa fa-paper-plane"></i> Click to enter your mailing app
+					</button>
+					<button class="w3-button w3-light-grey w3-padding-large" type="reset">
+					<i class="fa fa-trash"></i> Clear Form
+					</button>
+				</p>
+				</form>
+			</div>
+			<!-- End Contact Section -->
+ <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+          <a href="mailto:chalfonteagles@gmail.com?Subject=" target="_top">Click here if the button above does not open a mailing app</a>
+        </div>
+       
+        </button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+        });
+    </script>
+        <script>
+      function myFunction() {
+      var element = document.body;
+      element.classList.toggle("dark-mode");
+      }
+    </script>
+</body>
+
+</html>
