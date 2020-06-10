@@ -55,11 +55,15 @@ function checkDark() {
 }
 
 function sidebarToggle() {
+  
   var element = document.getElementById("sidebar");
   var element2 = document.getElementById("sidebarCollapse");
+  var element3 = document.getElementById("content");
   if (element.classList) {
     element.classList.toggle("active");
     element2.classList.toggle("active");
+    element3.classList.toggle("active");
+
   } else {
     // For IE9
     var classes = element.className.split(" ");
@@ -71,5 +75,7 @@ function sidebarToggle() {
       classes.push("active");
       element.className = classes.join(" ");
   }
+  
+
 }
 

@@ -25,7 +25,10 @@ a, a:hover, a:focus {
 
 
 
-
+t{
+  font-size: 40px;
+  text-align:center;
+}
 
 .navbar {
     padding: 15px 10px;
@@ -72,11 +75,11 @@ a, a:hover, a:focus {
 }
 
 
+
 #sidebar {
     min-width: 250px;
     max-width: 250px;
-    height: 100%;
-    
+    min-height: 100%;
     background: #c43535;
     color: #fff;
     transition: all 0.23s cubic-bezier(0.02, 0.02, 0.270, 0.665);
@@ -84,11 +87,17 @@ a, a:hover, a:focus {
     position: relative;
 }
 
+
 #sidebar.active {
     margin-left: -250px;
     transform: rotateY(100deg);
     
 }
+
+
+
+
+
 
 #sidebar .sidebar-header {
     padding: 20px;
@@ -107,7 +116,7 @@ a, a:hover, a:focus {
 
 #sidebar ul li a {
     padding: 10px;
-    font-size: 1.1em;
+    font-size: 1.8em;
     display: block;
 }
 #sidebar ul li a:hover {
@@ -152,6 +161,11 @@ ul ul a {
 }
 
 
+.head-container{
+  padding: 15px;
+  margin:2px;
+}
+
 
 #sidebarCollapse {
     width: 40px;
@@ -159,7 +173,11 @@ ul ul a {
     background: #bbbbbb;
     cursor: pointer;
     border-radius: 4px;
+    float: left;
+    
 }
+
+
 
 #sidebarCollapse span {
     width: 80%;
@@ -234,12 +252,16 @@ img {
         transform: rotateY(90deg);
     }
     #sidebar.active {
-        margin-left: 0;
-        transform: none;
+      margin-left: 0;
+      transform: none;
+      position: relative;
+      top: 0;
+      bottom: 0;
+      
     }
-    #sidebar.active + #content{
-      margin-right: -250px;
-    }
+
+    
+    
     
     #sidebarCollapse span:first-of-type,
     #sidebarCollapse span:nth-of-type(2),
@@ -266,7 +288,19 @@ img {
 }
 
 
-
+@media (max-width: 500px) {
+  #sidebar{
+    min-width:100%;
+    
+  }
+  #content{
+    position: fixed;
+    margin: 0px;
+  }
+  #sidebar.active + #content {
+    display:none;
+  }
+}
 
 
 .dark-mode {
@@ -274,9 +308,16 @@ img {
   color: white;
 }
 
-.dark-mode #sidebarCollapse {
+hr {
+  background: black;
+  
+}
+
+.dark-mode #sidebarCollapse, hr {
   filter: invert(100%)
 }
+
+
 
 .switch {
   position: relative;

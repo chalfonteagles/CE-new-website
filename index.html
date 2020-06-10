@@ -34,17 +34,18 @@
         <nav id="sidebar">
             <div class="sidebar-header">
               <div class="row">
-                <div class="col-sm">
-                   
+                
+                <div class="col-sm" style="justify-content: center;">
+                  <img src="images/Eagles.png" alt="Logo" style="max-width: 80px; min-width: 60px; height: auto; cursor: pointer;" onclick="sidebarToggle()" title="Close Navigation">
                 </div>
                 <div class="col-sm">
-                  <h3>Chalfont Eagles</h3>
+                  <h1>Chalfont Eagles</h1> 
                 </div>
               </div>
             </div>
             <div style="padding: 10px">
               <h6>Dark Mode</h6>
-              <label class="switch">
+              <label class="switch" >
                 <input id="dmswitch" onclick="myFunction()" type="checkbox">
                 <span class="slider round"></span>
               </label>
@@ -84,20 +85,171 @@
 
         <!-- Page Content Holder -->
         <div id="content">
-            <img src="images/Eagles.jpg" style="width:10%">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <button type="button" id="sidebarCollapse" class="navbar-btn" onclick="sidebarToggle()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+          <div class="container">
+              <button type="button" id="sidebarCollapse" class="navbar-btn" onclick="sidebarToggle()">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+   
+              <img src="images/Eagles.jpg" style="max-width:100px; float: right; border-radius: 5px;">
+            
+          </div>
+          <hr/>
+          <div class="title">
+         <t>Chalfont Eagles Badminton Club</t>
 
-            </nav>
+          </div>
 
-            <h2>Chalfont Eagles Badminton Club</h2>
-            <p>The Chalfont Eagles Badminton Club is a prestigous badminton club for 12-16 year olds. Being the biggest junior badminton club in Buckinghamshire, Chalfont Eagles has won many league titles in it's under 12's, under 14's and under 16's badminton squads.</p>
-            <p>This makes Chalfont Eagles the perfect badminton club for beginner players who want to try to learn the game, or more experienced players who want to use the clubs expert coaching in order to improve at the game. Wether you are new to the sport, or a more advanced player, Chalfont Eagles Badminton Club can help you develop your skills; on and off the court.</p>
+<style>
+/* Slideshow container  FOR GROUP IMAGE SLIDESHOW */
+.slideshow-container {
+  width: 108%;
+  position: relative;
+  margin: 0;
+}
 
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+
+
+
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2.5s;
+  animation-name: fade;
+  animation-duration: 4.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .6} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .6} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 200px) {
+  .text {font-size: 11px}
+}
+</style>
+</head>
+<body>
+
+<div class="slideshow-container" style="display: flex; justify-content: center;">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 10</div>
+  <img src="images/gp1.jpg" style="width:95%">
+  <div class="text">Group 1</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">2 / 10</div>
+  <img src="images/IMG1.jpg" style="width:90%">
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">3 / 10</div>
+  <img src="images/IMG2.jpg" style="width:90%">
+
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">4 / 10</div>
+  <img src="images/gp2.jpg" style="width:90%">
+  <div class="text">Group 2</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">5 / 10</div>
+  <img src="images/IMG3.jpg" style="width:90%">
+
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">6 / 10</div>
+  <img src="images/IMG4.jpg" style="width:90%">
+
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">7 / 10</div>
+  <img src="images/gp3.jpg" style="width:90%">
+  <div class="text">Group 3</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">8 / 10</div>
+  <img src="images/IMG5.jpg" style="width:90%">
+
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">9 / 10</div>
+  <img src="images/IMG6.jpg" style="width:90%">
+
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">10 / 10</div>
+  <img src="images/IMG7.jpg" style="width:90%">
+
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+  <span class="dot"></span> 
+ 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 4600); // Change image every 4.6 seconds
+}
+</script>
             <div class="solidLine"></div>
             <div class="container">
                 <div class="row">
@@ -140,12 +292,13 @@
                         <a href="news.html" class="link-underline">See All News</a>
                     </div>
                     <div class="col-md-3 text-right">
-                        <button id="ct-js-district-calendar--prev" type="button" class="slick-arrow next"><img src="https://www.solodev.com/assets/news-slider/arrow-prev.jpg" alt="Previous"></button>
-                        <button id="ct-js-district-calendar--next" type="button" class="slick-arrow next"><img src="https://www.solodev.com/assets/news-slider/arrow-next.jpg" alt="Next"></button>
+                        <button id="ct-js-district-calendar--prev" type="button" class="slick-arrow next">&8592 </button>
+                        <button id="ct-js-district-calendar--next" type="button" class="slick-arrow next"><b>→	</b></button>
                     </div>
                 </div>
             </div>
-
+          <p>The Chalfont Eagles Badminton Club is a prestigous badminton club for 12-16 year olds. Being the biggest junior badminton club in Buckinghamshire, Chalfont Eagles has won many league titles in it's under 12's, under 14's and under 16's badminton squads.</p>
+          <p>This makes Chalfont Eagles the perfect badminton club for beginner players who want to try to learn the game, or more experienced players who want to use the clubs expert coaching in order to improve at the game. Whether you are new to the sport, or a more advanced player, Chalfont Eagles Badminton Club can help you develop your skills; on and off the court.</p>
             <!-- Bootstrap JS -->
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
