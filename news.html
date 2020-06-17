@@ -1,18 +1,25 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
+    
     <title>Chalfont Eagles Badminton Club</title>
 
     <!-- Custom JS -->
     <script src="script.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="news-slider.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <script src="news-slider.js"></script>
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="style.css">
 
@@ -23,16 +30,31 @@
 </head>
 
 <body onload="checkDark()">
-
     <div class="wrapper">
         <!-- Sidebar Holder -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h3>Chalfont Eagles</h3>
+              <div class="row">
+                
+                <div class="col-sm">
+                  <button type="button" style="float: right; cursor: pointer;" id="SmScrSidebarClose" class="navbar-btn" onclick="SmScrSidebarToggle()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </button>
+                  <div class="container-fluid" style="justify-content: center;">
+                    <img src="images/Eagles.png" alt="Logo" style="max-width: 80px; min-width: 60px; height: auto;" 
+                  </div>
+                  
+                </div>
+                <div class="col-sm">
+                  <h1>Chalfont Eagles</h1> 
+                </div>
+              </div>
             </div>
             <div style="padding: 10px">
               <h6>Dark Mode</h6>
-              <label class="switch">
+              <label class="switch" >
                 <input id="dmswitch" onclick="myFunction()" type="checkbox">
                 <span class="slider round"></span>
               </label>
@@ -72,18 +94,17 @@
 
         <!-- Page Content Holder -->
         <div id="content">
-             <img src="images/Eagles.jpg" style="width:10%">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
-                <div class="container-fluid">
-
-                    <button type="button" id="sidebarCollapse" class="navbar-btn">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>  
-                </div>
-            </nav>
+          <div class="container">
+              <button type="button" id="sidebarCollapse" class="navbar-btn" onclick="sidebarToggle()">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+   
+              <img src="images/Eagles.jpg" style="max-width:100px; float: right; border-radius: 5px;">
+            
+          </div>
+          <hr/>
             
 
 

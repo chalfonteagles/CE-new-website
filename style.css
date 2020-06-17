@@ -11,7 +11,7 @@ body {
 
 p {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.1em;
+    font-size: 1.3em;
     font-weight: 300;
     line-height: 1.7em;
     color: #999;
@@ -26,7 +26,7 @@ a, a:hover, a:focus {
 
 
 t{
-  font-size: 40px;
+  font-size: 2.4em;
   text-align:center;
 }
 
@@ -104,10 +104,12 @@ t{
     background: #c43535;
 }
 
+/*
 #sidebar ul.components {
     padding: 20px 0;
     border-bottom: 1px solid #a62b2b;
 }
+*/
 
 #sidebar ul p {
     color: #fff;
@@ -167,7 +169,7 @@ ul ul a {
 }
 
 
-#sidebarCollapse {
+.navbar-btn {
     width: 40px;
     height: 40px;
     background: #bbbbbb;
@@ -177,10 +179,22 @@ ul ul a {
     
 }
 
+#SmScrSidebarClose{
+  display: none;
+}
 
+#SmScrSidebarClose span:first-of-type{
+  transform: rotate(45deg) translate(2px, 2px);
+}
+#SmScrSidebarClose span:nth-of-type(2) {
+  opacity: 0;
+}
+#SmScrSidebarClose span:last-of-type{ 
+  transform: rotate(-45deg) translate(1px, -1px);
+}
 
-#sidebarCollapse span {
-    width: 80%;
+.navbar-btn span {
+    width: 100%;
     height: 2px;
     margin: 0 auto;
     display: block;
@@ -189,11 +203,11 @@ ul ul a {
     transition-delay: 0s;
 }
 
-#sidebarCollapse:hover span{
+.navbar-btn:hover span{
   background: #fff;
 }
 
-#sidebarCollapse:hover{
+.navbar-btn:hover{
   background:#555
 }
 
@@ -284,15 +298,25 @@ img {
     }
     body{
       overflow-x: hidden;
+      position:relative;
     }
 }
 
 
-@media (max-width: 500px) {
-  #sidebar{
+@media (max-width: 450px) {
+  #sidebar.active{
     min-width:100%;
     
   }
+  #SmScrSidebarClose{
+    display: inline;
+  }
+
+  #sidebarCollapse.active{
+    visibility: hidden;
+    transition-delay: 1s;
+  }
+  /*
   #content{
     position: fixed;
     margin: 0px;
@@ -300,6 +324,7 @@ img {
   #sidebar.active + #content {
     display:none;
   }
+  */
 }
 
 
@@ -309,11 +334,12 @@ img {
 }
 
 hr {
-  background: black;
+  background: white;
+  
   
 }
 
-.dark-mode #sidebarCollapse, hr {
+.dark-mode .navbar-btn, hr {
   filter: invert(100%)
 }
 
@@ -357,7 +383,7 @@ hr {
 }
 
 input:checked + .slider {
-  background-color: rgb(40, 243, 33);
+  background-color: rgb(0, 255, 00);
 }
 
 input:focus + .slider {
@@ -432,7 +458,5 @@ cookieConsent a.cookieConsentOK:hover {
     background-color: #E0C91F;
 }
 /*Cookie Consent End*/
-
-
 
 

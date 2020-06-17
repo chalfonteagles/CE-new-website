@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
+    
     <title>Chalfont Eagles Badminton Club</title>
 
     <!-- Custom JS -->
@@ -16,8 +16,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
     <script src="news-slider.js"></script>
+
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="style.css">
 
@@ -28,15 +30,22 @@
 </head>
 
 <body onload="checkDark()">
-
     <div class="wrapper">
         <!-- Sidebar Holder -->
         <nav id="sidebar">
             <div class="sidebar-header">
               <div class="row">
                 
-                <div class="col-sm" style="justify-content: center;">
-                  <img src="images/Eagles.png" alt="Logo" style="max-width: 80px; min-width: 60px; height: auto; cursor: pointer;" onclick="sidebarToggle()" title="Close Navigation">
+                <div class="col-sm">
+                  <button type="button" style="float: right; cursor: pointer;" id="SmScrSidebarClose" class="navbar-btn" onclick="SmScrSidebarToggle()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </button>
+                  <div class="container-fluid" style="justify-content: center;">
+                    <img src="images/Eagles.png" alt="Logo" style="max-width: 80px; min-width: 60px; height: auto;" 
+                  </div>
+                  
                 </div>
                 <div class="col-sm">
                   <h1>Chalfont Eagles</h1> 
@@ -107,6 +116,7 @@
   width: 108%;
   position: relative;
   margin: 0;
+  padding: 20px;
 }
 
 /* Caption text */
@@ -292,11 +302,12 @@ function showSlides() {
                         <a href="news.html" class="link-underline">See All News</a>
                     </div>
                     <div class="col-md-3 text-right">
-                        <button id="ct-js-district-calendar--prev" type="button" class="slick-arrow next">&8592 </button>
-                        <button id="ct-js-district-calendar--next" type="button" class="slick-arrow next"><b>→	</b></button>
+                        <button id="ct-js-district-calendar--prev" type="button" class="slick-arrow next navbar-btn">←</button>
+                        <button id="ct-js-district-calendar--next" type="button" class="slick-arrow next navbar-btn">→</button>
                     </div>
                 </div>
             </div>
+          <div class="solidLine"></div>
           <p>The Chalfont Eagles Badminton Club is a prestigous badminton club for 12-16 year olds. Being the biggest junior badminton club in Buckinghamshire, Chalfont Eagles has won many league titles in it's under 12's, under 14's and under 16's badminton squads.</p>
           <p>This makes Chalfont Eagles the perfect badminton club for beginner players who want to try to learn the game, or more experienced players who want to use the clubs expert coaching in order to improve at the game. Whether you are new to the sport, or a more advanced player, Chalfont Eagles Badminton Club can help you develop your skills; on and off the court.</p>
             <!-- Bootstrap JS -->
